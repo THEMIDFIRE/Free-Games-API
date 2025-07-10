@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Freedom Gamers is a free website for gamers to find new and popular games and more info about their favourite games">
+    <title>Freedom Gamers|Free popular games finder</title>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="loader" class="bg-dark-subtle d-none">
+        <span class="loader"></span>
+    </div>
+
+    <main>
+        <header class="mt-5 sticky-top">
+            <nav class="navbar navbar-expand-md bg-dark-subtle">
+                <div class="container">
+                    <a class="navbar-brand fw-medium" href="#">Future Gaming</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Filters</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Platform
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" data-platform="all">All</a></li>
+                                        <li><a class="dropdown-item" href="#" data-platform="pc">PC</a></li>
+                                        <li><a class="dropdown-item" href="#" data-platform="browser">Browser</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown category">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Category
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" data-category="all">All</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="mmorpg">MMORPG</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="shooter">Shooter</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="strategy">Strategy</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="moba">MOBA</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="racing">Racing</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="sports">Sports</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="action">Action</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="action-rpg">Action RPG</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="open-world">Open World</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="survival">Survival</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="pvp">PVP</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="pve">PVE</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="zombie">Zombie</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="first-person">First Person</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="third-person">Third Person</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="card">Card</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="battle-royale">Battle Royale</a></li>
+                                        <li><a class="dropdown-item" href="#" data-category="sci-fi">Sci-Fi</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Sort By
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" data-sort="relevance">Default: Relevance</a></li>
+                                        <li><a class="dropdown-item" href="#" data-sort="popularity">Popularity</a></li>
+                                        <li><a class="dropdown-item" href="#" data-sort="release-date">Release Date</a></li>
+                                        <li><a class="dropdown-item" href="#" data-sort="alphabetical">Alphabetical</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="allGames" class="py-5">
+            <div class="container">
+                <div class="row g-3" id="games">
+                </div>
+            </div>
+        </section>
+        <section id="gameDetails" class="bg-dark-subtle d-none">
+            <div class="container py-4" id="details">
+            </div>
+        </section>
+    </main>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

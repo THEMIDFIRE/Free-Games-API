@@ -1,0 +1,172 @@
+@font-face {
+  font-family: Phudu;
+  src: url('../font/Phudu-VariableFont_wght.ttf')
+}
+:root {
+  --text: #111301;
+  --background: 230, 230, 230;
+  --primary: #8eb201;
+  --secondary: #dbdbdb;
+  --accent: #2caf42;
+}
+
+body {
+  background-color: rgb(var(--background));
+  font-family: Phudu;
+
+}
+
+#allGames .genre,
+#allGames .platform {
+  font-size: 0.6rem;
+}
+
+#allGames .inner {
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#allGames .inner .shortInfo {
+  background-color: rgba(var(--background), 0.55);
+  position: absolute;
+  inset: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+#allGames .inner .thumbnail {
+  transition: all 0.3s ease-in-out;
+}
+#allGames .inner:hover .thumbnail {
+  transform: scale(1.1);
+}
+#allGames .inner:hover .shortInfo {
+  height: 100%;
+  padding: 0.5rem;
+}
+
+.shortDesc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-primary {
+  --bs-btn-color: var(--text);
+  --bs-btn-bg: var(--accent);
+  --bs-btn-border-color: var(--accent);
+  --bs-btn-hover-color: var(--text);
+  --bs-btn-hover-bg: var(--primary);
+  --bs-btn-hover-border-color: var(--primary);
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: var(--text);
+  --bs-btn-active-bg: var(--primary);
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: var(--text);
+  --bs-btn-disabled-bg: var(--accent);
+  --bs-btn-disabled-border-color: var(--accent);
+}
+
+.dropdown-menu {
+  max-height: 145px;
+  overflow-y: auto;
+}
+
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: progress;
+}
+
+.loader {
+  display: block;
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: var(--text);
+}
+
+.loader:after,
+.loader:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+
+.loader:after {
+  color: var(--primary);
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0 0 0 currentcolor;
+  }
+
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+
+  25% {
+    box-shadow: 0 0.2em 0 0 currentcolor;
+  }
+
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+
+  75% {
+    box-shadow: 0 -0.2em 0 0 currentcolor;
+  }
+
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
